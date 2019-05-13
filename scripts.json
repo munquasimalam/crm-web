@@ -1,0 +1,12 @@
+[
+    "./node_modules/jquery/dist/jquery.js",
+    "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+    "./node_modules/moment/moment.js",
+    "./node_modules/bootstrap-select/dist/js/bootstrap-select.js",
+    "./node_modules/angular/angular.js",
+    "./node_modules/angular-ui-router/release/angular-ui-router.js",
+    "./node_modules/ng-tags-input/build/ng-tags-input.js",
+    "./node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js",
+    "./node_modules/angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar.js",
+    "./src/js/**/*.js"
+]

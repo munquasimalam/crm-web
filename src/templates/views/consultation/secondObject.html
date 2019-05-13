@@ -1,0 +1,88 @@
+<div ng-controller="secondConsultationObjCtrl">
+    <div class="row">
+        <div class="col-md-12 my-3 p-0">
+            <!-- header directive -->
+            <header label="'Second Consultation'" icon="'note_add'"></header>
+            <div class="row pt-3">
+                <div class="col-9">
+                    <div class="row">
+                        <div class="col-12">
+                            <demography data="options.customerData"></demography>
+                        </div>
+                    </div>
+                    <div class="row pt-3">
+                        <div class="col-12">
+                            <consult data="options.consultationData"></consult>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <form class="mx-5 my-2">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <!-- cost -->
+                                        <div class="form-group">
+                                            <label for="NoOfHair">
+                                                Total Cost
+                                            </label>
+                                            <input type="text" ng-model="data.payment.total"
+                                                class="form-control form-control-sm" id="cost">
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <!-- rhinoplasty -->
+                                        <div class="form-group">
+                                            <label for="NoOfHair">
+                                                Rhinoplasty
+                                            </label>
+                                            <input type="text" ng-model="data.rhinoplasty"
+                                                class="form-control form-control-sm" id="rhinoplasty" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label for="emi" class="col-form-label col-form-label-sm">EMI
+                                            </label>
+                                            <input type="text" ng-model="data.rhinoplasty"
+                                                class="form-control form-control-sm" id="rhinoplasty" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="remark" class="col-form-label col-form-label-sm">Remarks
+                                            </label>
+                                            <textarea ng-model="data.remark" class="form-control form-control-sm col-8"
+                                                rows="3" id="remark"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row pl-5">
+                        <div class="col-3" ng-if="options.addBtn">
+                            <button type="button" class="btn btn-primary btn-block"
+                                ng-click="handlers.save()">SAVE</button>
+                        </div>
+                        <div class="col-3" ng-if="!options.addBtn">
+                            <button type="button" class="btn btn-primary btn-block"
+                                ng-click="handlers.edit()">EDIT</button>
+                        </div>
+
+                        <div class="col-3">
+                            <button type="button" class="btn btn-secondary btn-block"
+                                ng-click="handlers.back()">CANCEL</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 pl-0 pr-4">
+                    <notes list="options.noteList"></notes>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
